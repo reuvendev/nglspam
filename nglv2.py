@@ -95,7 +95,7 @@ def send_request(proxy, user_agent, device_id, nglusername, message, value, tota
                 success_count += 1
             else:
                 fail_count += 1
-        time.sleep(10)  # Wait for 10 seconds between requests
+        time.sleep(1)  
 
     except requests.exceptions.RequestException as e:
         fail_count += 1
@@ -143,6 +143,7 @@ SENDING ATTACK
 ╚════════════╝
          """))
         print(Colorate.Vertical(Colors.blue_to_purple, f"Username: {nglusername} | Message: {message} | Count: {Count}"))
+        # after this it will print the sent and failed and updates in realtime
 
         value = 0
         success_count = 0
